@@ -1,0 +1,90 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+<title>WikiMedia-Video-Tracking-Tool</title>
+</head>
+ <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">WikiMedia-Video-Tracking-Tool</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode" target="_blank">License</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="video-tracker-query-form">
+		<h2 class="video-tracker-query-form-heading">Please fill out query form</h2>
+        <label for="inputLink" class="sr-only">Video-Link</label>
+        <input type="text" id="video-link" class="form-control" placeholder="Video-Link" required autofocus>
+        <label for="inputdate-from" class="sr-only">Date from</label>
+        <input type="text" id="date-from" class="form-control" placeholder="Date from (MM/DD/YYYY)" required autofocus>
+        <label for="inputdate-to" class="sr-only">Date to</label>
+        <input type="text" id="date-to" class="form-control" placeholder="Date to (MM/DD/YYYY)" required autofocus>
+        <button id="get-views-button" class="btn btn-lg btn-primary btn-block" type="button">Get views</button>
+        <button id="csv-export" class="btn btn-lg btn-primary btn-block" type="button">Export as CSV</button>
+        <button id="clear-query" class="btn btn-lg btn-primary btn-block" type="button">Clear query</button>
+      </div>
+      <div class="video-tracker-query-results">
+      	<table id="result-table">
+		        	<tr class="row">
+		        		<th class="col-md-4">Date</td>
+				        <th class="col-md-4"></td>
+				        <th class="col-md-4">Views</td>
+				    </tr>
+				    <tr class="row title">
+		        		<td class="data-row" colspan="3"><span id="video-title"></span></td>
+				    </tr>
+				    <tr class="row">
+		        		<td class="col-md-4">Days: <span id="total-number-days"></span></td>
+				        <td class="col-md-4"></td>
+				        <td class="col-md-4">Total: <span id="total-number"></span></td>
+				    </tr>
+	    </table>
+      </div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+  	<link rel="stylesheet" type="text/css" href="skins/wikimedia-video-tool.css"></link>
+	<script type="text/javascript" src="libs/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="libs/jquery-ui/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css">
+	<!-- <script type="text/javascript" src="libs/jquery.ajax-cross-origin.min.js"></script>  -->
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.min.css">
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="libs/bootbox.min.js"></script>
+	<script src="libs/bootstrap-waitingfor.min.js"></script>
+	<script type="text/javascript" src="src/mediaplaycounts.js"></script>
+	<script type="text/javascript" src="src/wikimedia-video-tool.js"></script>
+  </body>
+</html>
